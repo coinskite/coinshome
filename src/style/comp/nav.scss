@@ -1,0 +1,140 @@
+nav {
+  background-color: $primary;
+  padding: 1rem 3rem;
+  color: #fff;
+  gap: 1rem;
+
+  position: sticky;
+  top: 0;
+
+  transition: .2s ease-in-out;
+  font-size: 18px;
+
+  a {
+    color: inherit;
+  }
+
+  .logo-black {
+    display: none;
+  }
+}
+
+nav.change {
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, .2);
+  background-color: #fff;
+  color: #000;
+
+  .logo-black {
+    display: block;
+  }
+
+  .logo-white {
+    display: none;
+  }
+
+  .navArrowSvg path,
+  .hamburger-svg line {
+    stroke: #000;
+  }
+
+  .nav-btn {
+    background-color: $primary;
+  }
+}
+
+.nav-logo {
+  width: 10rem;
+}
+
+.navArrowSvg path {
+  stroke: #fff;
+}
+
+.links {
+  padding-left: 3rem;
+}
+
+.nav-btn {
+  background-color: #fff;
+  color: #000;
+
+  margin-left: auto;
+  font-size: 14px;
+}
+
+#hamburger {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  nav {
+    padding: 1rem 2rem;
+  }
+
+  .links {
+    padding-left: 1rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  nav {
+    padding: 1rem 1.5rem;
+  }
+
+  .links {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  nav {
+    justify-content: space-between;
+  }
+
+  nav {
+    color: #000;
+
+    .navArrowSvg path {
+      stroke: #000;
+    }
+  }
+
+  #hamburger {
+    display: block;
+  }
+
+  .nav-btn,
+  .links {
+    display: none;
+  }
+
+  .links {
+    padding: 1rem 3rem;
+    position: fixed;
+    top: 4rem;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    background-color: #fff;
+    transition: all 1s ease;
+    z-index: 1;
+  }
+
+  .links.open {
+    display: flex;
+  }
+
+  .links .df {
+    width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  nav {
+    padding: 1rem;
+  }
+}

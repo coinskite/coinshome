@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap');
+
+:root {
+  --primar-clr: hsl(138, 71%, 46%);
+  --black-clr: hsl(0, 0%, 10%);
+}
+
+$primary: var(--primar-clr);
+$black: var(--black-clr);
+
+body {
+  font-family: "Montserrat";
+}
+
+h1,
+h2 {
+  font-family: "Roboto";
+}
